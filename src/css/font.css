@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'Yekan';
+	src: url( '../fonts/Yekan.eot' );
+	src: url( '../fonts/Yekan.eot?#iefix' ) format( 'embedded-opentype' ),
+		url( '../fonts/Yekan.woff2' ) format( 'woff2' ),
+		url( '../fonts/Yekan.woff' ) format( 'woff' ),
+		url( '../fonts/Yekan.ttf' ) format( 'truetype' ),
+		url( '../fonts/Yekan.svg#Yekan' ) format( 'svg' );
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: IRANSans FaNum;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/IranSans FaNum/eot/IRANSansWeb(FaNum).eot');
+    src: url('../fonts/IranSans FaNum/eot/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+    url('../fonts/IranSans FaNum/woff2/IRANSansWeb(FaNum).woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/IranSans FaNum/woff/IRANSansWeb(FaNum).woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/IranSans FaNum/ttf/IRANSansWeb(FaNum).ttf') format('truetype');
+}
+
+.faNum {
+    font-family: "IRANSans FaNum", sans-serif !important;
+}
