@@ -11,9 +11,11 @@ import {useRoute} from "vue-router";
 const route = useRoute()
 
 onMounted(async () => {
+
     await api.get('/api/user').then(res => {
         console.log('User: ', res.data)
     })
+
 })
 </script>
 

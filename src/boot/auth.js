@@ -12,6 +12,8 @@ export default boot(({router, store}) => {
 
         appStore.setTitle(to.meta.title)
 
+        console.log('To: ', to)
+
         if (to.meta.middleware === "guest") {
             if (authStore.isLoggedIn) {
                 next({ name: "dashboard" })
@@ -20,7 +22,7 @@ export default boot(({router, store}) => {
         }
         else if (to.meta.middleware === "auth") {
             if (!Cookies.get('XSRF-TOKEN'))
-                authStore.logOut()
+                await authStore.logOut()
 
             if (useAuthStore().isLoggedIn)
                 next()

@@ -106,7 +106,6 @@ export default defineComponent({
         const leftDrawerOpen = ref(false)
 
         onMounted(() => {
-            // console.log('test')
         })
 
         return {

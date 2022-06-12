@@ -2,19 +2,21 @@ import {defineStore} from 'pinia';
 import router from "src/router";
 
 export const useAuthStore = defineStore('auth', {
-    persist: {
-        storage: sessionStorage
-    },
+    persist: true,
 
     state: () => ({
         isLoggedIn: false,
-        user: null
+        user: null,
+        permissions: []
     }),
 
     getters: {
     },
 
     actions: {
+        async setPermissions(permissions) {
+            this.permissions = permissions
+        },
         async setUser(user) {
             this.user = user
         },

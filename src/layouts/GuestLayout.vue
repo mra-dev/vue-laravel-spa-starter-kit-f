@@ -24,13 +24,13 @@ import {useAppStore} from "stores/app-store";
 const { title, loading } = storeToRefs(useAppStore())
 
 import GuestMenu from "components/GuestMenu";
-import titleMarquee from "src/services/titleMarquee";
+// import titleMarquee from "src/services/titleMarquee";
 
 const $q = useQuasar()
 $q.dark.set(true)
 
 onMounted(() => {
-    titleMarquee()
+    // titleMarquee()
 })
 </script>
 

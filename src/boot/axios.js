@@ -5,6 +5,9 @@ import Cookies from 'js-cookie';
 import { useAuthStore } from "stores/auth-store";
 const authStore = useAuthStore()
 
+import { useAppStore } from "stores/app-store";
+const appStore = useAppStore()
+
 // Be careful when using SSR for cross-request state pollution
 // due to creating a Singleton instance here;
 // If any client changes this (global) instance, it might be a
@@ -48,7 +51,11 @@ const responseHandler = response => {
 };
 const errorHandler = error => {
     if (error.response.status === 401) {
+        // logout user automatically
         authStore.$reset()
+        appStore.loggedOut = true
+
+        // Can be omitted duo to adding a login dialog in purpose of not losing page user entered data (alike WordPress)
         route.push({ name: 'login', query: { _back: route.currentRoute.value.fullPath } })
     }
 

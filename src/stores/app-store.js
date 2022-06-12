@@ -1,9 +1,12 @@
 import {defineStore} from 'pinia';
+import titleMarquee from "src/services/titleMarquee";
 
 export const useAppStore = defineStore('app', {
     state: () => ({
         title: '',
-        loading: false
+        loading: false,
+        loggedOut: false,
+        titleMarqueeTimer: null
     }),
 
     getters: {
@@ -13,9 +16,10 @@ export const useAppStore = defineStore('app', {
     },
 
     actions: {
-        setTitle(title) {
-            document.title = title + ' - ' + 'اپلیکیشن مدیریت ساختمان'
+        async setTitle(title = 'بدون عنوان') {
+            let t = title + ' - ' + 'اپلیکیشن مدیریت ساختمان'
             this.title = title
+            titleMarquee(t, true)
         },
         offLoad() {
             this.loading = false
