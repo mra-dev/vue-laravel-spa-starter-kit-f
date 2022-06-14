@@ -1,1 +1,1 @@
-# vue-laravel-spa-starter-kit
+# vue-laravel-spa-starter-kit (**FrontEnd**)
