@@ -8,9 +8,9 @@ const logInUser = async (user) => {
     await authStore.setPermissions([
         'user list',
         'user show',
-        'user edit',
+        // 'user edit',
         'user update',
-        'user delete',
+        // 'user delete',
     ])
 }
 

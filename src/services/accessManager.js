@@ -8,8 +8,12 @@ const can = permission => exists(permission)
 const cant = permission => !exists(permission)
 
 const hasAny = permissions => {
-    let t = permissions.forEach(p => exists(p))
-    console.log(t)
+    for (const perm of permissions) {
+        if (exists(perm)) {
+            return true
+        }
+    }
+    return false
 }
 
-export { can, cant }
+export { can, cant, hasAny }

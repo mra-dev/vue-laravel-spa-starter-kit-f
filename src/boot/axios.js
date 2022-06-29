@@ -22,7 +22,7 @@ axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*'
 axios.defaults.withCredentials = true
 
 const api = axios.create({
-    baseURL: location.protocol + '//' + location.hostname + ':' + '8000',
+    baseURL: location.protocol + '//' + (process.env.DEV ? '' : 'api.') + location.hostname + (process.env.DEV ? ':8000' : ''),
     maxRedirects: 0
 })
 

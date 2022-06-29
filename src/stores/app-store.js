@@ -6,7 +6,6 @@ export const useAppStore = defineStore('app', {
         title: '',
         loading: false,
         loggedOut: false,
-        titleMarqueeTimer: null
     }),
 
     getters: {
@@ -17,7 +16,7 @@ export const useAppStore = defineStore('app', {
 
     actions: {
         async setTitle(title = 'بدون عنوان') {
-            let t = title + ' - ' + 'اپلیکیشن مدیریت ساختمان'
+            let t = title + ' - ' + 'اپلیکیشن جریان هاب'
             this.title = title
             titleMarquee(t, true)
         },

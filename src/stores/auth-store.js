@@ -7,7 +7,13 @@ export const useAuthStore = defineStore('auth', {
     state: () => ({
         isLoggedIn: false,
         user: null,
-        permissions: []
+        permissions: [],
+
+        auth: {
+            mode: null,
+            data: null,
+            expiry: null
+        }
     }),
 
     getters: {

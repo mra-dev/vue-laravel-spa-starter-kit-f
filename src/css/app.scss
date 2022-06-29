@@ -1,15 +1,34 @@
 // app global css in SCSS form
 
 @import "font.css";
-//#app, body, html, input {
-//    font-family: 'Yekan', sans-serif;
-//    font-size: 17px;
-//}
-//
-//.q-table th {
-//    font-size: 15px;
-//}
-//
-//.q-bottom-sheet__item.q-hoverable.q-focusable.cursor-pointer.relative-position {
-//    @apply flex flex-col justify-center items-center
-//}
+
+.q-table th {
+    font-size: 15px;
+}
+
+.q-bottom-sheet__item.q-hoverable.q-focusable.cursor-pointer.relative-position {
+    @apply flex flex-col justify-center items-center
+}
+
+.text-brand {
+    color: #27DEBF !important;
+}
+.bg-brand {
+    background: #27DEBF !important;
+}
+
+a {
+    text-decoration: none !important;
+    transition: opacity;
+    transition-duration: .5s;
+}
+
+.link {
+    font-weight: bold;
+}
+.link:link, .link:visited, .link:active {
+    color: $accent !important;
+}
+.link:hover {
+    opacity: 70%;
+}

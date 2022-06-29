@@ -29,8 +29,10 @@ module.exports = configure(function (ctx) {
             'addressbar-color',
             'axios',
             'i18n',
-
-            'auth'
+            'auth',
+            'access',
+            'themeManager',
+            'dayjs'
         ],
 
         // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-css
@@ -107,7 +109,10 @@ module.exports = configure(function (ctx) {
 
             // Quasar plugins
             plugins: [
-                'AddressbarColor'
+                'AddressbarColor',
+                'LocalStorage',
+                'AppFullscreen',
+                'Notify'
             ]
         },
 
@@ -156,8 +161,8 @@ module.exports = configure(function (ctx) {
 
 
             manifest: {
-                name: `Apartment Management`,
-                short_name: `Apartment Management`,
+                name: `Content Management`,
+                short_name: `Content Management`,
                 description: `A Quasar Project`,
                 display: 'standalone',
                 orientation: 'portrait',

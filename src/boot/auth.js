@@ -7,12 +7,25 @@ const appStore = useAppStore()
 import {useAuthStore} from "stores/auth-store"
 const authStore = useAuthStore()
 
+import {cant, hasAny} from "src/services/accessManager";
+
+
 export default boot(({router, store}) => {
     router.beforeEach(async (to, from, next) => {
 
         appStore.setTitle(to.meta.title)
 
-        console.log('To: ', to)
+        if (authStore.isLoggedIn) {
+            if (to.meta.permissions?.length) {
+                if (!hasAny(to.meta.permissions))
+                    next({path: '/not-authorized'})
+            }
+            if (to.meta.permission) {
+                if (cant(to.meta.permission))
+                    next({path: '/not-authorized'})
+            }
+        }
+
 
         if (to.meta.middleware === "guest") {
             if (authStore.isLoggedIn) {

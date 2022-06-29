@@ -1,13 +1,10 @@
-<template>
-    <q-page class="flex column flex-center">
-        <img
-            alt="Quasar logo"
-            src="~assets/quasar-logo-vertical.svg"
-            style="width: 200px; height: 200px"
-        >
-        {{ useAuthStore().isLoggedIn }}
-    </q-page>
-</template>
+<script>
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+    name: 'IndexPage'
+})
+</script>
 
 <script setup>
 import {onMounted} from "vue";
@@ -21,29 +18,18 @@ const $q = useQuasar()
 const router = useRouter()
 
 onMounted(async () => {
-
     // $q.dark.set(true)
-
-    // console.log('Logging in...')
-    // await api.post('/login', {
-    //     email: 'pacocha.clare@example.org',
-    //     password: 'password'
-    // })
-    //     .then(login => {
-    //         if (login.data.redirect)
-    //             router.replace('/home')
-    //         console.log(login)
-    //     })
-    //
-    // console.log("Getting user Info...")
-    // await api.get('/api/user').then(res => {
-    //     console.log('User: ', res.data)
-    // })
 })
-
-// import { defineComponent } from 'vue'
-//
-// export default defineComponent({
-//   name: 'IndexPage'
-// })
 </script>
+
+<template>
+    <q-page class="flex column flex-center">
+        <img
+            alt="Quasar logo"
+            src="~assets/quasar-logo-vertical.svg"
+            style="width: 200px; height: 200px"
+        >
+        {{ useAuthStore().isLoggedIn }}
+        <router-link :to="{ name: 'login' }">لاگین</router-link>
+    </q-page>
+</template>
