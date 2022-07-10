@@ -12,12 +12,12 @@ const route = useRoute()
     <q-card class="my-card transparent" flat>
 
         <q-card-section class="flex flex-center row q-mb-lg">
-            <q-toolbar-title style="font-weight: bold !important;" class="text-center text-bold text-h4 ">
+            <q-toolbar-title style="font-weight: bold !important;text-overflow: unset !important;overflow: unset !important;" class="text-center text-bold text-h4 ">
                 <slot name="title" />
             </q-toolbar-title>
         </q-card-section>
 
-        <q-card-section>
+        <q-card-section class="q-pa-sm">
             <slot />
         </q-card-section>
 

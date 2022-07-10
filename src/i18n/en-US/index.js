@@ -1,7 +1,12 @@
-// This is just an example,
-// so you can safely delete all default props below
+import auth from "src/i18n/en-US/auth";
+import common from "src/i18n/en-US/common";
 
-export default {
-  failed: 'Action failed',
-  success: 'Action was successful'
+const messages = {
+    auth,
+    common,
+
+    failed: 'Action failed',
+    success: 'Action was successful'
 }
+
+export default messages

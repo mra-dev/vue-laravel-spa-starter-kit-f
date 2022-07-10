@@ -8,7 +8,8 @@
         <div class="code-input">
             <template v-for="(v, index) in values" :key="index">
                 <q-input
-                    class="text-center transition-all"
+                    class="text-center"
+                    style="transition: all"
                     color="accent"
                     type="tel"
                     pattern="[0-9]"
@@ -32,6 +33,8 @@
                     :required="props.required"
                     :disable="props.disabled"
                     maxlength="1"
+                    no-error-icon
+                    :error="props.error"
                 />
             </template>
         </div>
@@ -44,6 +47,10 @@ import { ref, toRef, onBeforeUpdate } from "vue";
 
 const props = defineProps({
     className: String,
+    error: {
+        type: Boolean,
+        default: false
+    },
     fields: {
         type: Number,
         default: 3,

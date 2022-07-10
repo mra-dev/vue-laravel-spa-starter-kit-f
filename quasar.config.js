@@ -32,7 +32,8 @@ module.exports = configure(function (ctx) {
             'auth',
             'access',
             'themeManager',
-            'dayjs'
+            'dayjs',
+            'languageManager'
         ],
 
         // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-css
@@ -98,7 +99,7 @@ module.exports = configure(function (ctx) {
             config: {},
 
             // iconSet: 'material-icons', // Quasar icon set
-            lang: 'fa-IR', // Quasar language pack
+            // lang: 'fa-IR', // Quasar language pack
 
             // For special cases outside of where the auto-import strategy can have an impact
             // (like functional components as one of the examples),
@@ -161,13 +162,13 @@ module.exports = configure(function (ctx) {
 
 
             manifest: {
-                name: `Content Management`,
-                short_name: `Content Management`,
-                description: `A Quasar Project`,
+                name: `سیستم مدیریت داده جریان هاب`,
+                short_name: `جریان هاب`,
+                description: `سیستمی جهت ساخت، نگهداری امن و مدیریت آسان داده‌های بیزنس شما`,
                 display: 'standalone',
                 orientation: 'portrait',
-                background_color: '#ffffff',
-                theme_color: '#027be3',
+                background_color: '#37474F',
+                theme_color: '#27DEBF',
                 icons: [
                     {
                         src: 'icons/icon-128x128.png',
@@ -228,7 +229,7 @@ module.exports = configure(function (ctx) {
             builder: {
                 // https://www.electron.build/configuration/configuration
 
-                appId: 'frontend'
+                appId: 'jaryanhub'
             },
 
             // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain

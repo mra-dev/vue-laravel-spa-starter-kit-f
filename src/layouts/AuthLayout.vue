@@ -4,7 +4,9 @@
             <q-page class="fit row wrap justify-center items-stretch content-stretch">
 
                 <div class="col flex flex-center q-pa-md">
-                    <router-view/>
+                    <transition name="slide-fade">
+                        <router-view />
+                    </transition>
                 </div>
                 <div class="col gt-sm flex flex-center q-pa-md window-height">
                     <img src="~assets/Auth/Auth.svg" class="full-height full-width" alt="">

@@ -16,9 +16,9 @@ const toggleTheme = () => {
         setTheme(false)
 }
 
-setTheme(initTheme)
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
     setTheme(event.matches)
 })
+setTheme(initTheme)
 
 export { setTheme, toggleTheme }

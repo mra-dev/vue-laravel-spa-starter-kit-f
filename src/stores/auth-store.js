@@ -11,7 +11,7 @@ export const useAuthStore = defineStore('auth', {
 
         auth: {
             mode: null,
-            data: null,
+            data: {},
             expiry: null
         }
     }),
